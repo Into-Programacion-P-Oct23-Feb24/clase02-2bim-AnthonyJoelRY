@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo06 {
+public class Ejemplo062 {
 
     /**
      * @param args the command line arguments
@@ -19,28 +19,35 @@ public class Ejemplo06 {
     public static void main(String[] args) {
         // Declarar y generar arreglos en Java
         Scanner entrada = new Scanner(System.in);
-        int dato;
+        int dato = 0;
+        int x;
         // arreglo de tipo entero
         int[] arreglo1 = new int[7];
-        
+
         // Se asigna valores al arreglo, pidiendo valores por teclado
         // se usa un ciclo repetitivo
         for (int i = 0; i < arreglo1.length; i++) {
-        
+
             System.out.println("Ingrese un valor para el arreglo");
             dato = entrada.nextInt();
-            // se asigna la variable dato a la posición del arreglo
-            // de acuerdo al valor de i
-            arreglo1[i] = dato;//
-            
+            if (dato > 5 && dato < 9 || dato == 11 || dato == 13 || dato == 14) {
+                //Establecemos un rango y excluimos datos con un and y un or 
+                
+                // se asigna la variable dato a la posición del arreglo
+                // de acuerdo al valor de i
+                arreglo1[i] = dato;
+            } else {
+                arreglo1[i] = 5;// C
+            }
+
         }
-        
+
         // Se hace uso del ciclo repetitivo for para recorrer el arreglo
         for (int i = 0; i < arreglo1.length; i++) {
             System.out.printf("Subíndice o Índice %d, con valor %d\n",
                     i, arreglo1[i]);
         }
-        
+
     }
 
 }
