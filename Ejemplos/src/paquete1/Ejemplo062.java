@@ -32,12 +32,14 @@ public class Ejemplo062 {
             dato = entrada.nextInt();
             if (dato > 5 && dato < 9 || dato == 11 || dato == 13 || dato == 14) {
                 //Establecemos un rango y excluimos datos con un and y un or 
+                //Filtrado y excluyendo un rango de datos y un numero de datos 
+                //especificos 
                 
                 // se asigna la variable dato a la posición del arreglo
                 // de acuerdo al valor de i
                 arreglo1[i] = dato;
             } else {
-                arreglo1[i] = 5;// C
+                arreglo1[i] = 5;// Caso contrario llenamos el arreglo con 5
             }
 
         }
